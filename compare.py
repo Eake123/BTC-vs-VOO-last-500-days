@@ -18,6 +18,8 @@ class r:
         return r
 
     def normalize(self):
+        '''Function makes the candles the same length and if the candles are gathered with the same interval and end date
+        it makes it so they compare the same time frame'''
         if len(self.voo) > len(self.btc):
             voo = self.normalize_list(self.voo,len(self.btc))
             btc = self.btc
@@ -31,6 +33,7 @@ class r:
         return candles[-length:]
     
     def get_close(self,candle_list,key):
+        '''List comp to extract the close value'''
         candle_list = [float(x[key]) for x in candle_list]
         return candle_list
         

@@ -19,10 +19,10 @@ class r:
     def normalize(self):
         if len(self.voo) > len(self.btc):
             voo = self.normalize_list(self.voo,len(self.btc))
-            btc = self.normalize_list(self.btc,False)
+            btc = self.normalize_list(self.btc,'False')
 
         else:
-            voo = self.normalize_list(self.voo,False)
+            voo = self.normalize_list(self.voo,'False')
             btc = self.normalize_list(self.btc,len(self.voo))
         return voo,btc
     
